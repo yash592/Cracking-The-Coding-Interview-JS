@@ -6,4 +6,4 @@ stringRotation = (str1, str2) => {
 
 }
 
-stringRotation("waterbottle", "erbottlewat")
+console.log(stringRotation("waterbottle", "erbottlewat"))
