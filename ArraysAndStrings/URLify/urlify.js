@@ -3,10 +3,26 @@
 // length of the string. (Note: If implementing in Java, please use a character array so that you can
 // perform this operation in place.)
 
-URLify = str => {
-  let string = str.trim()
+URLifyv1 = str => {
+  let string = str.trim();
   console.log(string);
-  return string.replace(/\s/g, '%20')  
-}
+  return string.replace(/\s/g, "%20");
+};
 
-console.log(URLify("Mr John Smith ", 13))
+console.log(URLifyv1("Mr John Smith ", 13));
+
+let str = "Mr John Smith  ";
+
+URLifyv2 = string => {
+  let url = "";
+  for (let i = 0; i < string.trim().length; i++) {
+    if (string[i] === " ") {
+      url += "%20";
+    } else {
+      url += string[i];
+    }
+  }
+  return [url, str];
+};
+
+console.log(URLifyv2(str));
